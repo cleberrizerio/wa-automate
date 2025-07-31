@@ -18,7 +18,7 @@ let globalClient = null
 const sessoesCadastro = {}
 
 create({
-  sessionId: 'bot-session-Convidados',
+  sessionId: 'session-Convidados',
   multiDevice: true,
   headless: true,
   qrTimeout: 0,
