@@ -7,7 +7,7 @@ const {
   salvarCadastroNoBancoEvento,
   cadastrarUsuarioEEvento,
   buscarIdClientePorCpf,
-} = require('./functions')
+} = require('./functions_Convidados')
 
 module.exports = async function cadastro(msg, client, sessoesCadastro) {
   const numero = msg.from
