@@ -30,14 +30,14 @@ create({
   client.onMessage(async (msg) => {
     const contact = await client.getContact(msg.from)
     //const nomeContato = contact.name // notifyName não existe especificamente
-    const chat = await msg.getChat()
+    //const chat = await msg.getChat()
     const etiqueta = contact.labels || []
     const contato = contact
     const telefoneEditado = contato.id.replace('@c.us', '').slice(2)
     const dadosConvidado = await buscarConvidado(telefoneEditado)
     const idEvento = dadosConvidado?.idEvento ?? null
 
-    if (!filtroMensagens(msg, chat)) return
+    //if (!filtroMensagens(msg, chat)) return
 
     const body = msg.body
 
