@@ -33,7 +33,8 @@ create({
     if (!filtroMensagens(msg, { isGroup })) return
 
     //const etiquetas = await client.getChatLabels(numero)
-    const etiquetas = await client.removeLabels(numero, [])
+    const chat = await client.getChatById(numero)
+    const etiquetas = chat.labels || []
 
     if (etiquetas.includes('9')) {
       const telefoneEditado = numero.replace('@c.us', '').slice(2)
